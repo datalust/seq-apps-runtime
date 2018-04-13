@@ -15,6 +15,11 @@ namespace Seq.Apps
         [Obsolete("Use the Host(baseUri, instanceName) constructor.")]
         public Host(string[] listenUris, string instanceName)
         {
+            if (listenUris == null || listenUris.Length == 0)
+            {
+                throw new ArgumentException("At least 1 listen uri must be given.", nameof(listenUris));
+            }
+
             InstanceName = instanceName;
             ListenUris = listenUris;
             BaseUri = listenUris[0];
@@ -27,13 +32,12 @@ namespace Seq.Apps
         /// <param name="baseUri">The base URI that the server can be accessed on.</param>
         public Host(string baseUri, string instanceName)
         {
+            BaseUri = baseUri ?? throw new ArgumentNullException(nameof(baseUri));
             InstanceName = instanceName;
 
             #pragma warning disable 612, 618 // Obsolete
             ListenUris = new [] { baseUri };
-            #pragma warning restore 612, 618
-
-            BaseUri = baseUri;
+            #pragma warning restore 612, 618            
         }
 
         /// <summary>
