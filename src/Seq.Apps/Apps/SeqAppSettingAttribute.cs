@@ -31,5 +31,19 @@ namespace Seq.Apps
         /// the type of the property.
         /// </summary>
         public SettingInputType InputType { get; set; }
+
+        /// <summary>
+        /// If set to <c>true</c>, the setting should be considered an invocation
+        /// parameter (as opposed to a purely configuration-time setting). Typical
+        /// invocation parameters include things like destination email addresses,
+        /// notification channels, message queue names, and so-on.
+        /// </summary>
+        /// <remarks>
+        /// At configuration-time, the Seq administrator can still decide to deny
+        /// user overrides of the parameter, or select other parameters to be user-
+        /// overridable. This setting provides an interface hint so that appropriate
+        /// invocation parameters can be selected by default.
+        /// </remarks>
+        public bool IsInvocationParameter { get; set; }
     }
 }
