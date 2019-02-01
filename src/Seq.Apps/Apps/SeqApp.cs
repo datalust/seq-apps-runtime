@@ -3,7 +3,7 @@
 namespace Seq.Apps
 {
     /// <summary>
-    /// A Seq app; the app can subscribe to events by implementing <see cref="ISubscribeTo{TData}"/> or
+    /// A Seq app; the app can subscribe to events by implementing <see cref="ISubscribeToJsonAsync"/>, <see cref="ISubscribeTo{TData}"/>, or
     /// <see cref="ISubscribeToAsync{TData}"/>, or produce events by implementing <see cref="IPublishJson"/>.
     /// </summary>
     /// <remarks>Apps are hosted in a single-threaded manner: initialization and event firing and disposal are
