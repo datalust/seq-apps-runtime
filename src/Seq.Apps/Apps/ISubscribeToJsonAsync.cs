@@ -3,16 +3,15 @@
 namespace Seq.Apps
 {
     /// <summary>
-    /// Subscribes a app to a typed event, with the event handled asynchronously.
+    /// Subscribes an app to events formatted as CLEF JSON, with the event handled asynchronously.
     /// </summary>
-    /// <typeparam name="TData">The type representing event data.</typeparam>
-    public interface ISubscribeToAsync<TData>
+    public interface ISubscribeToJsonAsync
     {
         /// <summary>
         /// Invoked when an event is sent to a reactor.
         /// </summary>
-        /// <param name="evt">The event.</param>
+        /// <param name="json">The event, formatted as CLEF JSON.</param>
         /// <returns>A <see cref="Task"/> that will complete when the app has finished handling the event.</returns>
-        Task OnAsync(Event<TData> evt);
+        Task OnAsync(string json);
     }
 }

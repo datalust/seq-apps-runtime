@@ -19,7 +19,7 @@ namespace Seq.Apps
         Host Host { get; }
 
         /// <summary>
-        /// A logger through which the app can raise events.
+        /// A logger through which the app can raise diagnostic events.
         /// </summary>
         ILogger Logger { get; }
 

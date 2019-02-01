@@ -11,7 +11,7 @@
     <PackageTags>seq</PackageTags>
     <PackageIconUrl>https://getseq.net/images/seq-nuget.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/datalust/seq-apps-runtime</PackageProjectUrl>
-    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>    
   </PropertyGroup>
   
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net4.5.2' ">
