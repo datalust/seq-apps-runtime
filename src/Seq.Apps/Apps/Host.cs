@@ -35,9 +35,9 @@ namespace Seq.Apps
             BaseUri = baseUri ?? throw new ArgumentNullException(nameof(baseUri));
             InstanceName = instanceName;
 
-            #pragma warning disable 612, 618 // Obsolete
+#pragma warning disable 612, 618 // Obsolete
             ListenUris = new [] { baseUri };
-            #pragma warning restore 612, 618            
+#pragma warning restore 612, 618            
         }
 
         /// <summary>
