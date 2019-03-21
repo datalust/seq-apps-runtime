@@ -17,14 +17,10 @@ namespace Seq.Apps
         /// <param name="storagePath">A folder in which the app may store data.</param>
         public App(string id, string title, IReadOnlyDictionary<string, string> settings, string storagePath)
         {
-            if (id == null) throw new ArgumentNullException(nameof(id));
-            if (title == null) throw new ArgumentNullException(nameof(title));
-            if (settings == null) throw new ArgumentNullException(nameof(settings));
-            if (storagePath == null) throw new ArgumentNullException(nameof(storagePath));
-            Id = id;
-            Title = title;
-            Settings = settings;
-            StoragePath = storagePath;
+            Id = id ?? throw new ArgumentNullException(nameof(id));
+            Title = title ?? throw new ArgumentNullException(nameof(title));
+            Settings = settings ?? throw new ArgumentNullException(nameof(settings));
+            StoragePath = storagePath ?? throw new ArgumentNullException(nameof(storagePath));
         }
 
         /// <summary>
