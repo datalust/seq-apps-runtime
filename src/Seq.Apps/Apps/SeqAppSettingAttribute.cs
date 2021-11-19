@@ -45,5 +45,15 @@ namespace Seq.Apps
         /// invocation parameters can be selected by default.
         /// </remarks>
         public bool IsInvocationParameter { get; set; }
+        
+        /// <summary>
+        /// If the setting value contains code in a programming or markup language, the
+        /// language name. The Seq UI may choose fonts and syntax highlighting accordingly.
+        /// </summary>
+        /// <remarks>Valid names are a subset of the names and aliases recognized by
+        /// <a href="https://github.com/github/linguist/blob/master/lib/linguist/languages.yml">GitHub
+        /// Linguist</a>. Use the generic value <c>code</c> if the language is non-specific but
+        /// the value should be displayed in fixed-width font.</remarks>
+        public string Syntax { get; set; }
     }
 }
