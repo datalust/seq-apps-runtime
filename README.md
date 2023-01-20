@@ -3,3 +3,7 @@
 _Seq.Apps_ is a C# API for writing [Seq](https://datalust.co/seq) input and output plug-ins.
 
 To get started, check out [the Seq developer documentation](https://docs.datalust.co/docs/writing-seq-apps).
+
+## Versioning
+
+The _Seq.Apps_ package is versioned to match the lowest Seq version supporting all API features.
