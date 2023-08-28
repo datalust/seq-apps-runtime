@@ -46,6 +46,9 @@ namespace Seq.Apps
         public string Id { get; }
         
         
+        /// <summary>
+        /// The event timestamp.
+        /// </summary>
         [Obsolete("Use `Timestamp` instead."), EditorBrowsable(EditorBrowsableState.Never)]
         public DateTime TimestampUtc => Timestamp;
     }

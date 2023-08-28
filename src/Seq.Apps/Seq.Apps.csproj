@@ -4,17 +4,21 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <VersionPrefix>2023.4.0</VersionPrefix>
     <RootNamespace>Seq</RootNamespace>
-    <GenerateXmlDocumentation>true</GenerateXmlDocumentation>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Description>C# API for Seq creating hosted apps.</Description>
     <Authors>Datalust Pty Ltd</Authors>
     <PackageTags>seq</PackageTags>
-    <PackageIconUrl>https://getseq.net/images/seq-nuget.png</PackageIconUrl>
+    <PackageIcon>seq-apps-runtime.png</PackageIcon>
     <PackageProjectUrl>https://github.com/datalust/seq-apps-runtime</PackageProjectUrl>
-    <PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>    
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>    
   </PropertyGroup>
   
   <ItemGroup>
     <PackageReference Include="Serilog" Version="3.0.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Include="../../asset/seq-apps-runtime.png" Pack="true" Visible="false" PackagePath="" />
   </ItemGroup>
 </Project>
