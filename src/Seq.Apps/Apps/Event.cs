@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace Seq.Apps
 {
@@ -13,13 +14,13 @@ namespace Seq.Apps
         /// </summary>
         /// <param name="id">The event ID.</param>
         /// <param name="eventType">The event type.</param>
-        /// <param name="timestampUtc">The </param>
+        /// <param name="timestamp">The event timestamp.</param>
         /// <param name="data"></param>
-        public Event(string id, uint eventType, DateTime timestampUtc, TData data)
+        public Event(string id, uint eventType, DateTime timestamp, TData data)
         {
             Id = id;
             EventType = eventType;
-            TimestampUtc = timestampUtc;
+            Timestamp = timestamp;
             Data = data;
         }
 
@@ -30,9 +31,9 @@ namespace Seq.Apps
         public uint EventType { get; }
 
         /// <summary>
-        /// The UTC timestamp at which the event was created.
+        /// The event timestamp.
         /// </summary>
-        public DateTime TimestampUtc { get; }
+        public DateTime Timestamp { get; }
 
         /// <summary>
         /// The event payload.
@@ -43,5 +44,9 @@ namespace Seq.Apps
         /// The Seq event ID.
         /// </summary>
         public string Id { get; }
+        
+        
+        [Obsolete("Use `Timestamp` instead."), EditorBrowsable(EditorBrowsableState.Never)]
+        public DateTime TimestampUtc => Timestamp;
     }
 }

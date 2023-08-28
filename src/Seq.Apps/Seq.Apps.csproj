@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net4.5.2;netstandard2.0</TargetFrameworks>
-    <VersionPrefix>2021.4.1</VersionPrefix>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <VersionPrefix>2023.4.0</VersionPrefix>
     <RootNamespace>Seq</RootNamespace>
     <GenerateXmlDocumentation>true</GenerateXmlDocumentation>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
@@ -11,20 +11,10 @@
     <PackageTags>seq</PackageTags>
     <PackageIconUrl>https://getseq.net/images/seq-nuget.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/datalust/seq-apps-runtime</PackageProjectUrl>
-    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>    
-  </PropertyGroup>
-  
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'net4.5.2' ">
-    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>    
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="Serilog" Version="2.5.0" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net4.5.2' ">
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="Microsoft.CSharp" />
+    <PackageReference Include="Serilog" Version="3.0.1" />
   </ItemGroup>
 </Project>

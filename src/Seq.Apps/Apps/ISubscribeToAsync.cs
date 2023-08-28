@@ -6,6 +6,7 @@ namespace Seq.Apps
     /// Subscribes a app to a typed event, with the event handled asynchronously.
     /// </summary>
     /// <typeparam name="TData">The type representing event data.</typeparam>
+    /// <remarks>Use <see cref="ISubscribeToJsonAsync" /> for new code when possible.</remarks>
     public interface ISubscribeToAsync<TData>
     {
         /// <summary>
