@@ -1,17 +1,16 @@
 version: '{build}'
 skip_tags: true
-image: Visual Studio 2017
+image: Visual Studio 2022
 configuration: Release
-install:
 build_script:
-- ps: ./Build.ps1
+- pwsh: ./Build.ps1
 test: off
 artifacts:
 - path: artifacts/Seq.Apps.*.nupkg
 deploy:
 - provider: NuGet
   api_key:
-    secure: UsjWBevzo5AryVkTlDT6pdcz0rmiL/Gl7WA24UKciYXitDWZ+vcEImoU+k4i7UHL
+    secure: yHXRu2WkW8o4sFeY4T5bAclZ58y46Nqsqq1eaTTkm0bA5iU2JnAndsLtKIhk9/qb
   on:
     branch: /^(main|dev)$/
 - provider: GitHub
@@ -20,4 +19,4 @@ deploy:
   artifact: /Seq.Api.*\.nupkg/
   tag: v$(appveyor_build_version)
   on:
-    branch: master
+    branch: main

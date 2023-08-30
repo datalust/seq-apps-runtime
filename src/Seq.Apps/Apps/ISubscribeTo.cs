@@ -4,6 +4,7 @@
     /// Subscribes an app to a typed event.
     /// </summary>
     /// <typeparam name="TData">The type representing event data.</typeparam>
+    /// <remarks>Use <see cref="ISubscribeToJsonAsync" /> for new code when possible.</remarks>
     public interface ISubscribeTo<TData>
     {
         /// <summary>
